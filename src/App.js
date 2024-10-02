@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProductForm from "./components/ProductForm";
+import "./App.css";
+import Home from "./components/Home";
+import ProductList from "./components/ProductList";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //     <p>
+    //       Edit <code>src/App.js</code> and save to reload.
+    //     </p>
+    //     <a
+    //       className="App-link"
+    //       href="https://reactjs.org"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //     >
+    //       Learn React
+    //     </a>
+    //   </header>
+    // </div>
+    <BrowserRouter>
+        <div>
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/create-product" element={<ProductForm />} />
+        <Route path="/edit-product/:id" element={<ProductForm />} />
+      </Routes>
+        </div>
+    </BrowserRouter>
   );
 }
 
