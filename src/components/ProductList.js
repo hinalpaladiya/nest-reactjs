@@ -30,8 +30,11 @@ var ProductList = () => {
 	return (
 		<div className="container">
 			<h2 className="my-4">Product List</h2>
-			<Link to="/create-product" className="btn btn-primary mt-4">
+			<Link to="/create-product" className="btn btn-primary mt-4 me-3">
 				Add New Product
+			</Link>
+			<Link to="/create-user" className="btn btn-primary mt-4">
+				Add New User
 			</Link>
 			<table className="table table-striped">
 				<thead>

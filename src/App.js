@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductForm from "./components/ProductForm";
 import "./App.css";
 import Home from "./components/Home";
+import UserForm from "./components/User/UserForm";
+import UserList from "./components/User/UserList";
 import ProductList from "./components/ProductList";
 function App() {
   return (
@@ -29,6 +31,11 @@ function App() {
         <Route path="/" element={<ProductList />} />
         <Route path="/create-product" element={<ProductForm />} />
         <Route path="/edit-product/:id" element={<ProductForm />} />
+
+        <Route path="/users" component={UserList} />
+        <Route path="/create-user" element={<UserForm />} />
+        <Route path="/edit-user/:id" element={<UserForm />} />
+
       </Routes>
         </div>
     </BrowserRouter>
